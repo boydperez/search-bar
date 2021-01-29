@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Search bar</title>
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Script -->
+	<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+	<style>
+		.container {
+			margin-top: 100px;		
+		}
+
+		.show-div {
+			margin-top: 20px;
+		}	
+
+		.list-group-item {
+			border: none;
+			border-bottom: 0.4px solid lightgrey;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="d-flex flex-column">
+			<div class="d-flex justify-content-center">
+				<input id="query-field" name="query" type="text" placeholder="Search">
+			</div>
+			<div class="d-flex justify-content-center show-div">
+				<ul id="show" class="list-group"></ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
